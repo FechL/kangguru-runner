@@ -1,0 +1,85 @@
+## ORIGINAL VGA
+
+#NET "hsync" LOC = J14; --- ORIGINAL
+#NET "hsync" DRIVE = 2;
+#NET "hsync" PULLUP;
+
+#NET "vsync" LOC = K13;  --- ORIGINAL
+#NET "vsync" DRIVE = 2;
+#NET "vsync" PULLUP;
+
+#NET "Red[2]" LOC = F13; -- ORIGINAL
+#NET "Red[2]" DRIVE = 2;
+#NET "Red[2]" PULLUP;
+
+#NET "Red[1]" LOC = "D13"; --- IGNORE FIRST
+#NET "Red[1]" DRIVE = 2;
+#NET "Red[1]" PULLUP;
+
+#NET "Red[0]" LOC = C14; --- ORIGINAL
+#NET "Red[0]" DRIVE = 2;
+#NET "Red[0]" PULLUP;
+
+#NET "Green[2]" LOC = "G14";
+#NET "Green[2]" DRIVE = 2;
+#NET "Green[2]" PULLUP;
+
+# NET "Green[1]" LOC = "G13";
+# NET "Green[1]" DRIVE = 2;
+# NET "Green[1]" PULLUP;
+
+# NET "Green[0]" LOC = F14; --- ORIGINAL
+# NET "Green[0]" LOC = "H15";
+# NET "Green[0]" DRIVE = 2;
+# NET "Green[0]" PULLUP;
+
+# NET "Blue[1]" LOC = H13; --- ORIGINAL
+#NET "Blue[2]" DRIVE = 2;
+#NET "Blue[2]" PULLUP;
+
+#NET "Blue[1]" DRIVE = 2;
+#NET "Blue[1]" PULLUP;
+
+
+NET "vsync" LOC = "F14" | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST; #| PULLUP;
+NET "hsync" LOC = "F15" | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST; #| PULLUP;
+NET "Red[2]" LOC = "H14" | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST; #| PULLUP;  # STICK TO MANUAL
+NET "Red[1]" LOC = "D14" | IOSTANDARD = LVTTL | SLEW = FAST | DRIVE = 8; #| PULLUP;
+NET "Red[0]" LOC = "C14" | IOSTANDARD = LVTTL | SLEW = FAST | DRIVE = 8; #| PULLUP;
+NET "Green[2]" LOC = "H15" | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST; #| PULLUP; # STICK TO MANUAL
+NET "Green[1]" LOC = "A16" | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST; #| PULLUP;
+NET "Green[0]" LOC = "B16" | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST; #| PULLUP;
+NET "Blue[2]" LOC = "J13" | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST; #| PULLUP; # STICK TO MANUAL
+NET "Blue[1]" LOC = "G15" | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST; #| PULLUP;
+
+## ORIGINAL CLOCK
+# NET "clk" LOC = "B8";
+
+## NEW CLOCK
+NET "clk" LOC = "C9" | IOSTANDARD = LVCMOS33;
+
+## ORIGINAL INPUT
+# NET "reset" LOC = "P11";
+# NET "jump" LOC = G12; --- ORIGINAL
+
+## NEW INPUT
+NET "reset" LOC = "V4" | IOSTANDARD = LVCMOS33 | PULLDOWN;
+NET "jump" LOC = "H13" | IOSTANDARD = LVCMOS33 | PULLDOWN;
+NET "duck" LOC = "K17" | IOSTANDARD = LVCMOS33 | PULLDOWN;
+
+
+## NEW ANODES
+NET "anodes[2]" LOC = "J12" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW;
+NET "anodes[3]" LOC = "J14" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW;
+NET "anodes[1]" LOC = "J15" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW;
+NET "anodes[0]" LOC = "K14" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW;
+
+## ORIGINAL SEGMENTS
+NET "segments[7]" LOC = T12 | IOSTANDARD = LVCMOS33;
+NET "segments[6]" LOC = V13 | IOSTANDARD = LVCMOS33;
+NET "segments[5]" LOC = V12 | IOSTANDARD = LVCMOS33; 
+NET "segments[4]" LOC = N11 | IOSTANDARD = LVCMOS33;
+NET "segments[3]" LOC = A11 | IOSTANDARD = LVCMOS33;
+NET "segments[2]" LOC = C17 | IOSTANDARD = LVCMOS33;
+NET "segments[1]" LOC = D16 | IOSTANDARD = LVCMOS33;
+NET "segments[0]" LOC = P10 | IOSTANDARD = LVCMOS33;
